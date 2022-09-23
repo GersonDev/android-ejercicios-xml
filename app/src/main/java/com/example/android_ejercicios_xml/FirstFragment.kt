@@ -40,9 +40,15 @@ class FirstFragment : Fragment() {
         binding.calcularButton.setOnClickListener {
             val plazoTotal = binding.plazoTotalEditText.text.toString()
             val prestamo = binding.prestamoEditText.text.toString()
-            if (plazoTotal == "" ||prestamo == ""||selectedDate == "") {
-                binding.plazoTotalEditText.error = "Hubo un error este campo es obligatorio"
-                binding.prestamoEditText.error = "Hubo un error este campo es obligatorio"
+            if (selectedDate == "") {
+                binding.fechaEditText.error = "Hubo un error este campo es obligatorio"
+                return@setOnClickListener
+            }
+            if (prestamo == "") {
+                binding.fechaEditText.error = "Hubo un error este campo es obligatorio"
+                return@setOnClickListener
+            }
+            if (plazoTotal == "") {
                 binding.fechaEditText.error = "Hubo un error este campo es obligatorio"
                 return@setOnClickListener
             }
