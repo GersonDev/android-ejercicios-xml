@@ -1,6 +1,6 @@
 package com.example.android_ejercicios_xml.domain.models
 
-data class cronograma(
+data class Cronograma(
     val vencimiento: String,
     val amortizacion: Double,
     val interes: Double,

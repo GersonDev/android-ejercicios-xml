@@ -45,11 +45,11 @@ class FirstFragment : Fragment() {
                 return@setOnClickListener
             }
             if (prestamo == "") {
-                binding.fechaEditText.error = "Hubo un error este campo es obligatorio"
+                binding.prestamoEditText.error = "Hubo un error este campo es obligatorio"
                 return@setOnClickListener
             }
             if (plazoTotal == "") {
-                binding.fechaEditText.error = "Hubo un error este campo es obligatorio"
+                binding.plazoTotalEditText.error = "Hubo un error este campo es obligatorio"
                 return@setOnClickListener
             }
             findNavController().navigate(

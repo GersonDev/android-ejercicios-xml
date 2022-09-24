@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <TextView
+        android:id="@+id/vencimientoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="vencimiento"
+        android:textColor="#050404"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.506" />
+
+    <TextView
+        android:id="@+id/amortizacionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amortizacion"
+        android:textColor="#050404"
+        app:layout_constraintBottom_toBottomOf="@+id/vencimientoTextView"
+        app:layout_constraintStart_toEndOf="@+id/vencimientoTextView"
+        app:layout_constraintTop_toTopOf="@+id/vencimientoTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/InteresTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interes"
+        android:textColor="#050404"
+        app:layout_constraintBottom_toBottomOf="@+id/amortizacionTextView"
+        app:layout_constraintTop_toTopOf="@+id/amortizacionTextView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="163dp" />
+
+    <TextView
+        android:id="@+id/segurosTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="Seguros"
+        android:textColor="#050404"
+        app:layout_constraintBottom_toBottomOf="@+id/InteresTextView"
+        app:layout_constraintEnd_toStartOf="@+id/subvencionTextView"
+        app:layout_constraintTop_toTopOf="@+id/InteresTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/subvencionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="Subvencion"
+        android:textColor="#050404"
+        app:layout_constraintBottom_toBottomOf="@+id/segurosTextView"
+        app:layout_constraintEnd_toStartOf="@+id/cuotaTextView"
+        app:layout_constraintTop_toTopOf="@+id/segurosTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/cuotaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cuota"
+        android:textColor="#050404"
+        app:layout_constraintBottom_toBottomOf="@+id/subvencionTextView"
+        app:layout_constraintEnd_toStartOf="@+id/saldoTextView"
+        app:layout_constraintTop_toTopOf="@+id/subvencionTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/saldoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saldo"
+        android:textColor="#050404"
+        app:layout_constraintBottom_toBottomOf="@+id/cuotaTextView"
+        app:layout_constraintTop_toTopOf="@+id/cuotaTextView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="376dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
