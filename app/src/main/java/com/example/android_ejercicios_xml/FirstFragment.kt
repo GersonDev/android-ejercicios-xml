@@ -14,7 +14,9 @@ import com.example.android_ejercicios_xml.databinding.FragmentFirstBinding
  */
 class FirstFragment : Fragment() {
     //var selectedDate: String="" o
-    lateinit var selectedDate: String
+    var selectedDia: Int = 0
+    var selectedMes: Int = 0
+    var selectedAño: Int = 0
     private var _binding: FragmentFirstBinding? = null
 
     // This property is only valid between onCreateView and
@@ -40,7 +42,7 @@ class FirstFragment : Fragment() {
         binding.calcularButton.setOnClickListener {
             val plazoTotal = binding.plazoTotalEditText.text.toString()
             val prestamo = binding.prestamoEditText.text.toString()
-            if (selectedDate == "") {
+            if (selectedDia == 0 && selectedMes == 0 && selectedAño == 0) {
                 binding.fechaEditText.error = "Hubo un error este campo es obligatorio"
                 return@setOnClickListener
             }
@@ -54,7 +56,9 @@ class FirstFragment : Fragment() {
             }
             findNavController().navigate(
                 FirstFragmentDirections.actionFirstFragmentToSecondFragment(
-                    fecha = selectedDate,
+                    dia = selectedDia,
+                    mes = selectedMes,
+                    year = selectedAño,
                     plazoTotal = plazoTotal.toInt(),
                     prestamo = prestamo.toFloat()
                 )
@@ -70,7 +74,9 @@ class FirstFragment : Fragment() {
     private fun showDatePickerDialog() {
         val newFragment =
             DatePickerFragment.newInstance(DatePickerDialog.OnDateSetListener { _, year, month, day ->
-                selectedDate = "$day/${month + 1}/$year"
+                selectedDia = day
+                selectedMes = month
+                selectedAño = year
                 binding.fechaEditText.setText("$day/${month + 1}/$year")
             })
 

@@ -25,13 +25,19 @@
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
         <argument
-            android:name="fecha"
-            app:argType="string" />
+            android:name="dia"
+            app:argType="integer" />
         <argument
             android:name="prestamo"
             app:argType="float" />
         <argument
             android:name="plazoTotal"
+            app:argType="integer" />
+        <argument
+            android:name="mes"
+            app:argType="integer" />
+        <argument
+            android:name="year"
             app:argType="integer" />
     </fragment>
 </navigation>

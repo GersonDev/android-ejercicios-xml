@@ -9,79 +9,98 @@
         android:id="@+id/vencimientoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:background="@drawable/shape_cronograma"
         android:text="vencimiento"
         android:textColor="#050404"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/amortizacionTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.506" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/amortizacionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/shape_cronograma"
         android:text="Amortizacion"
         android:textColor="#050404"
-        app:layout_constraintBottom_toBottomOf="@+id/vencimientoTextView"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/InteresTextView"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/vencimientoTextView"
-        app:layout_constraintTop_toTopOf="@+id/vencimientoTextView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/InteresTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/shape_cronograma"
         android:text="Interes"
         android:textColor="#050404"
-        app:layout_constraintBottom_toBottomOf="@+id/amortizacionTextView"
-        app:layout_constraintTop_toTopOf="@+id/amortizacionTextView"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="163dp" />
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/segurosTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/amortizacionTextView"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/segurosTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="2dp"
+        android:background="@drawable/shape_cronograma"
         android:text="Seguros"
         android:textColor="#050404"
-        app:layout_constraintBottom_toBottomOf="@+id/InteresTextView"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/subvencionTextView"
-        app:layout_constraintTop_toTopOf="@+id/InteresTextView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/InteresTextView"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/subvencionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="2dp"
+        android:background="@drawable/shape_cronograma"
         android:text="Subvencion"
         android:textColor="#050404"
-        app:layout_constraintBottom_toBottomOf="@+id/segurosTextView"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cuotaTextView"
-        app:layout_constraintTop_toTopOf="@+id/segurosTextView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/segurosTextView"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/cuotaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/shape_cronograma"
         android:text="Cuota"
         android:textColor="#050404"
-        app:layout_constraintBottom_toBottomOf="@+id/subvencionTextView"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/saldoTextView"
-        app:layout_constraintTop_toTopOf="@+id/subvencionTextView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/subvencionTextView"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/saldoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/shape_cronograma"
         android:text="Saldo"
         android:textColor="#050404"
-        app:layout_constraintBottom_toBottomOf="@+id/cuotaTextView"
-        app:layout_constraintTop_toTopOf="@+id/cuotaTextView"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="376dp" />
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cuotaTextView"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
