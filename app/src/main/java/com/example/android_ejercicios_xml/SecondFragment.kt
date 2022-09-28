@@ -38,26 +38,48 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val seguros: Double = 21.80
-
+        val amortizacion = args.prestamo / args.plazoTotal
+        val interes = (args.prestamo * 0.17) / 12
+        val cuota = amortizacion + interes + seguros
 //       binding.cronogramaRecyclerView.adapter = CronogramaAdapter(listOf(Cronograma(vencimiento = "${args.fecha}",amortizacion = args.prestamo/args.plazoTotal, interes = 0.0, seguros = seguros, subvencion = 0.0, cuota = 0.0, saldo = 0.0)))
 
         val lista = mutableListOf<Cronograma>()
         var acumulador = 0
-
+        var acumulador2 = 0f
         for (i in 1..args.plazoTotal) {
             acumulador += 1
+            acumulador2 += amortizacion
             lista.add(
                 Cronograma(
                     vencimiento = "${args.dia}/${args.mes + acumulador}/${args.year}",
-                    amortizacion = args.prestamo / args.plazoTotal,
-                    interes = 0.0,
+                    amortizacion = amortizacion,
+                    interes = interes,
                     seguros = seguros,
                     subvencion = 0.0,
-                    cuota = 0.0,
-                    saldo = 0.0
+                    cuota = cuota,
+                    saldo = args.prestamo - acumulador2
                 )
             )
         }
+        var totalDeInteres = lista.sumByDouble {
+            it.interes
+        }
+        var totalDeCuotas = lista.sumByDouble {
+            it.cuota
+        }
+
+        lista.add(
+            Cronograma(
+                vencimiento = "TOTALES",
+                amortizacion = args.prestamo,
+                interes = totalDeInteres,
+                seguros = seguros,
+                subvencion = 0.0,
+                cuota = totalDeCuotas,
+                saldo = 0f
+
+            )
+        )
         binding.cronogramaRecyclerView.adapter = CronogramaAdapter(lista)
 
         binding.cronogramaRecyclerView.layoutManager =

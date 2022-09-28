@@ -14,12 +14,12 @@ class CronogramaAdapter(val cronogramas: List<Cronograma>) :
         RecyclerView.ViewHolder(itemBinding.root) {
         fun bind(cronograma: Cronograma) {
             itemBinding.vencimientoTextView.text = cronograma.vencimiento.toString()
-            itemBinding.InteresTextView.text = cronograma.interes.toString()
-            itemBinding.cuotaTextView.text = cronograma.cuota.toString()
-            itemBinding.saldoTextView.text = cronograma.saldo.toString()
+            itemBinding.InteresTextView.text = String.format("%.2f",cronograma.interes)
+            itemBinding.cuotaTextView.text = String.format("%.2f",cronograma.cuota)
+            itemBinding.saldoTextView.text = String.format("%.1f",cronograma.saldo)
             itemBinding.segurosTextView.text = cronograma.seguros.toString()
             itemBinding.subvencionTextView.text = cronograma.subvencion.toString()
-            itemBinding.amortizacionTextView.text = cronograma.amortizacion.toString()
+            itemBinding.amortizacionTextView.text = String.format("%.2f",cronograma.amortizacion)
         }
 
     }

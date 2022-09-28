@@ -7,5 +7,5 @@ data class Cronograma(
     val seguros: Double,
     val subvencion: Double,
     val cuota: Double,
-    val saldo: Double
+    val saldo: Float
 )
