@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/PantallaMenuGeneralFragment">
+
+    <fragment
+        android:id="@+id/PantallaMenuGeneralFragment"
+        android:name="com.example.android_ejercicios_xml.PantallaMenuGeneralFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/pantalla_menu_general_fragment">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/RegistroClienteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RegistroClienteFragment"
+        android:name="com.example.android_ejercicios_xml.RegistroClienteFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/registro_cliente_fragment">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/PantallaMenuGeneralFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RegistroNumeroDeCuentaFragment"
+        android:name="com.example.android_ejercicios_xml.RegistroNumeroDeCuentaFragment"
+        android:label="fragment_registro_numero_de_cuenta"
+        tools:layout="@layout/registro_numero_de_cuenta_fragment" />
+    <fragment
+        android:id="@+id/MovimientoFragment"
+        android:name="com.example.android_ejercicios_xml.MovimientoFragment"
+        android:label="movimiento_fragment"
+        tools:layout="@layout/movimiento_fragment" />
+    <fragment
+        android:id="@+id/InformeGeneralFragment"
+        android:name="com.example.android_ejercicios_xml.InformeGeneralFragment"
+        android:label="informe_general_fragment"
+        tools:layout="@layout/informe_general_fragment" />
+</navigation>
