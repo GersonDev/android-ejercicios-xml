@@ -5,7 +5,7 @@ data class Movimientos(
     val fechaOperacion:String,
     val descripcion:String,
     val numeroDeOperacion:Int,
-    val tipoDeOperacion:Int,
+    val tipoDeOperacion:Boolean,
     val importe:Double,
     val saldoContable:Double
 )

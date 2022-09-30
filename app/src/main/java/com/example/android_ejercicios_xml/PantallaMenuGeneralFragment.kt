@@ -33,16 +33,37 @@ class PantallaMenuGeneralFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.registroClienteButton.setOnClickListener {
-            findNavController().navigate(R.id.RegistroClienteFragment)
+            findNavController().navigate(
+                PantallaMenuGeneralFragmentDirections.actionPantallaMenuGeneralFragmentToRegistroClienteFragment(
+                    dni = 0,
+                    direccion = "",
+                    distrito = "",
+                    nombre = ""
+                )
+            )
         }
         binding.registroNumeroDeCuentaButton.setOnClickListener {
-            findNavController().navigate(R.id.RegistroNumeroDeCuentaFragment)
+            findNavController().navigate(
+                PantallaMenuGeneralFragmentDirections.actionPantallaMenuGeneralFragmentToRegistroNumeroDeCuentaFragment(
+                    dni = 0,
+                    moneda = "",
+                    saldo = 0,
+                    tipoDeCuenta = ""
+                )
+            )
         }
         binding.movimientosButton.setOnClickListener {
-            findNavController().navigate(R.id.MovimientoFragment)
+            findNavController().navigate(
+                PantallaMenuGeneralFragmentDirections.actionPantallaMenuGeneralFragmentToMovimientoFragment(
+                    descripcion = "",
+                    dni = 0,
+                    importe = 0,
+                    tipoOperacion = true
+                )
+            )
         }
         binding.informeGeneralButton.setOnClickListener {
-            findNavController().navigate(R.id.InformeGeneralFragment)
+            findNavController().navigate(PantallaMenuGeneralFragmentDirections.actionPantallaMenuGeneralFragmentToInformeGeneralFragment())
         }
     }
 
