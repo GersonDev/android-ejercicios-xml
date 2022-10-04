@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#9C9797"
-    tools:context=".MovimientoFragment">
+    tools:context=".presentation.movimiento.MovimientoFragment">
 
     <Button
         android:id="@+id/registrarMovimientoButton"
@@ -38,7 +38,7 @@
         android:text="Movimiento"
         android:textColor="#730505"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,11 +46,12 @@
         app:layout_constraintVertical_bias="0.5" />
 
     <LinearLayout
-        android:id="@+id/linearLayout10"
-        android:layout_width="236dp"
-        android:layout_height="44dp"
+        android:id="@+id/linearLayout12"
+        android:layout_width="384dp"
+        android:layout_height="52dp"
+        android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,59 +59,35 @@
         app:layout_constraintVertical_bias="0.5">
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DNI"
+            android:text="Tipo de Operacion"
             android:textColor="#730505"
             android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="196dp"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:inputType="textPersonName" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout12"
-        android:layout_width="384dp"
-        android:layout_height="52dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
-        app:layout_constraintVertical_bias="0.5">
-
         <RadioGroup
+            android:id="@+id/tipoDeOperacionRadioGroup"
             android:layout_width="220dp"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
-            <TextView
-                android:id="@+id/textView12"
+            <RadioButton
+                android:id="@+id/depositoRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tipo de Operacion"
-                android:textColor="#730505"
-                android:textSize="20sp" />
+                android:layout_weight="1"
+                android:text="Deposito" />
+
+            <RadioButton
+                android:id="@+id/retiroRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Retiro" />
+
         </RadioGroup>
 
-        <RadioButton
-            android:id="@+id/depositoRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Deposito" />
-
-        <RadioButton
-            android:id="@+id/retiroRadioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Retiro" />
 
     </LinearLayout>
 

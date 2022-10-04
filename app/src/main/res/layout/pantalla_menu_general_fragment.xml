@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#686161"
-    tools:context=".PantallaMenuGeneralFragment">
+    tools:context=".presentation.menu.PantallaMenuGeneralFragment">
 
     <Button
         android:id="@+id/registroClienteButton"

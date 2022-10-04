@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/PantallaMenuGeneralFragment"
-        android:name="com.example.android_ejercicios_xml.PantallaMenuGeneralFragment"
+        android:name="com.example.android_ejercicios_xml.presentation.menu.PantallaMenuGeneralFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/pantalla_menu_general_fragment">
 
@@ -26,69 +26,35 @@
     </fragment>
     <fragment
         android:id="@+id/RegistroClienteFragment"
-        android:name="com.example.android_ejercicios_xml.RegistroClienteFragment"
+        android:name="com.example.android_ejercicios_xml.presentation.cliente.RegistroClienteFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/registro_cliente_fragment">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/PantallaMenuGeneralFragment" />
-        <argument
-            android:name="dni"
-            app:argType="integer" />
-        <argument
-            android:name="nombre"
-            app:argType="string" />
-        <argument
-            android:name="direccion"
-            app:argType="string" />
-        <argument
-            android:name="distrito"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/RegistroNumeroDeCuentaFragment"
-        android:name="com.example.android_ejercicios_xml.RegistroNumeroDeCuentaFragment"
+        android:name="com.example.android_ejercicios_xml.presentation.cuenta.RegistroNumeroDeCuentaFragment"
         android:label="fragment_registro_numero_de_cuenta"
         tools:layout="@layout/registro_numero_de_cuenta_fragment" >
         <action
             android:id="@+id/action_RegistroNumeroDeCuentaFragment_to_PantallaMenuGeneralFragment"
             app:destination="@id/PantallaMenuGeneralFragment" />
-        <argument android:name="tipoDeCuenta"
-            app:argType="string" />
-        <argument
-            android:name="moneda"
-            app:argType="string" />
-        <argument
-            android:name="saldo"
-            app:argType="integer" />
-        <argument
-            android:name="dni"
-            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/MovimientoFragment"
-        android:name="com.example.android_ejercicios_xml.MovimientoFragment"
+        android:name="com.example.android_ejercicios_xml.presentation.movimiento.MovimientoFragment"
         android:label="movimiento_fragment"
         tools:layout="@layout/movimiento_fragment" >
         <action
             android:id="@+id/action_MovimientoFragment_to_PantallaMenuGeneralFragment"
             app:destination="@id/PantallaMenuGeneralFragment" />
-        <argument
-            android:name="dni"
-            app:argType="integer" />
-        <argument
-            android:name="tipoOperacion"
-            app:argType="boolean" />
-        <argument
-            android:name="importe"
-            app:argType="integer" />
-        <argument android:name="descripcion"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/InformeGeneralFragment"
-        android:name="com.example.android_ejercicios_xml.InformeGeneralFragment"
+        android:name="com.example.android_ejercicios_xml.presentation.reporte.InformeGeneralFragment"
         android:label="informe_general_fragment"
         tools:layout="@layout/informe_general_fragment" >
         <action

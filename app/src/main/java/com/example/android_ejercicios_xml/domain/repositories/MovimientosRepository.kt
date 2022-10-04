@@ -2,23 +2,22 @@ package com.example.android_ejercicios_xml.domain.repositories
 
 import android.content.Context
 import com.example.android_ejercicios_xml.data.datasources.DatabaseDataSource
-import com.example.android_ejercicios_xml.domain.models.Cliente
+import com.example.android_ejercicios_xml.domain.models.Movimiento
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class ClientesRepository {
+class MovimientosRepository {
     private val databaseDataSource = DatabaseDataSource()
 
-
-    suspend fun getAllTheClientes(context: Context): List<Cliente> {
+    suspend fun getAllTheMovimientos(context: Context): List<Movimiento> {
         return withContext(Dispatchers.IO) {
-            databaseDataSource.getAllTheClientes(context)
+            databaseDataSource.getAllMovimientos(context)
         }
     }
 
-    suspend fun insertCliente(context: Context, cliente: Cliente) {
+    suspend fun insertMovimiento(context: Context, movimiento: Movimiento) {
         return withContext(Dispatchers.IO) {
-            databaseDataSource.insertCliente(context, cliente)
+            databaseDataSource.insertMovimieto(context, movimiento)
         }
     }
 }

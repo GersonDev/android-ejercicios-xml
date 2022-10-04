@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#4B4646"
-    tools:context=".RegistroClienteFragment">
+    tools:context=".presentation.cliente.RegistroClienteFragment">
 
     <Button
         android:id="@+id/regresarUnoMPButton"

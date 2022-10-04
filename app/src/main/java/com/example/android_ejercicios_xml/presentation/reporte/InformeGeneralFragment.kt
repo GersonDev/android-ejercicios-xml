@@ -1,4 +1,4 @@
-package com.example.android_ejercicios_xml
+package com.example.android_ejercicios_xml.presentation.reporte
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.android_ejercicios_xml.R
 import com.example.android_ejercicios_xml.databinding.InformeGeneralFragmentBinding
-import com.example.android_ejercicios_xml.databinding.MovimientoFragmentBinding
 
 
 class InformeGeneralFragment : Fragment() {

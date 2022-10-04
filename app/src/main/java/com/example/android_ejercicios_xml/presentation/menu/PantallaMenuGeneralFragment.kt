@@ -1,4 +1,4 @@
-package com.example.android_ejercicios_xml
+package com.example.android_ejercicios_xml.presentation.menu
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -34,32 +34,17 @@ class PantallaMenuGeneralFragment : Fragment() {
 
         binding.registroClienteButton.setOnClickListener {
             findNavController().navigate(
-                PantallaMenuGeneralFragmentDirections.actionPantallaMenuGeneralFragmentToRegistroClienteFragment(
-                    dni = 0,
-                    direccion = "",
-                    distrito = "",
-                    nombre = ""
-                )
+                PantallaMenuGeneralFragmentDirections.actionPantallaMenuGeneralFragmentToRegistroClienteFragment()
             )
         }
         binding.registroNumeroDeCuentaButton.setOnClickListener {
             findNavController().navigate(
-                PantallaMenuGeneralFragmentDirections.actionPantallaMenuGeneralFragmentToRegistroNumeroDeCuentaFragment(
-                    dni = 0,
-                    moneda = "",
-                    saldo = 0,
-                    tipoDeCuenta = ""
-                )
+                PantallaMenuGeneralFragmentDirections.actionPantallaMenuGeneralFragmentToRegistroNumeroDeCuentaFragment()
             )
         }
         binding.movimientosButton.setOnClickListener {
             findNavController().navigate(
-                PantallaMenuGeneralFragmentDirections.actionPantallaMenuGeneralFragmentToMovimientoFragment(
-                    descripcion = "",
-                    dni = 0,
-                    importe = 0,
-                    tipoOperacion = true
-                )
+                PantallaMenuGeneralFragmentDirections.actionPantallaMenuGeneralFragmentToMovimientoFragment()
             )
         }
         binding.informeGeneralButton.setOnClickListener {
