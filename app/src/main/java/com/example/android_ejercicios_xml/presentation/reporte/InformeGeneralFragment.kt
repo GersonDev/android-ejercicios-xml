@@ -12,6 +12,7 @@ import com.example.android_ejercicios_xml.databinding.InformeGeneralFragmentBind
 
 class InformeGeneralFragment : Fragment() {
     private var _binding: InformeGeneralFragmentBinding? = null
+
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -31,6 +32,9 @@ class InformeGeneralFragment : Fragment() {
 
         binding.regresarCuatroMPButton.setOnClickListener {
             findNavController().navigate(R.id.PantallaMenuGeneralFragment)
+        }
+        binding.BuscarButton.setOnClickListener {
+            val  dni = binding.dniInformeEditText.text.toString()
         }
     }
 

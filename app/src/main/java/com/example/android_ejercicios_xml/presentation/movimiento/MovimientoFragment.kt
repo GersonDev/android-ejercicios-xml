@@ -14,6 +14,7 @@ import com.example.android_ejercicios_xml.databinding.MovimientoFragmentBinding
 class MovimientoFragment : Fragment() {
 
     val movimientoViewModel by viewModels<MovimientoViewModel>()
+
     private var _binding: MovimientoFragmentBinding? = null
 
     // This property is only valid between onCreateView and
@@ -40,7 +41,11 @@ class MovimientoFragment : Fragment() {
             val tipoDeOperacion = binding.tipoDeOperacionRadioGroup.checkedRadioButtonId.toString()
             val importe = binding.importeEditText.text.toString()
             val descripcion = binding.descripcionEditText.text.toString()
+            movimientoViewModel.enviarTipoDeOperacion(tipoDeOperacion)
+            movimientoViewModel.enviarimporte(importe)
+            movimientoViewModel.enviardescripcion(descripcion)
 
+            movimientoViewModel.registarMovimientos()
 
         }
     }

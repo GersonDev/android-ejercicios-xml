@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#959393"
     tools:context=".presentation.reporte.InformeGeneralFragment">
 
     <Button
@@ -11,6 +12,58 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Regresar"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="591dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/informeGeneralEditText"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/informeGeneralEditText"
+        android:layout_width="227dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/regresarCuatroMPButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="386dp"
+        android:layout_height="71dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/informeGeneralEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="143dp"
+            android:layout_height="66dp"
+            android:text="Ingrese Numero De Cuenta:"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/dniInformeEditText"
+            android:layout_width="148dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/BuscarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

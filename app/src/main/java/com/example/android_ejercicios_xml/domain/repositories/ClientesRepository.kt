@@ -21,4 +21,7 @@ class ClientesRepository {
             databaseDataSource.insertCliente(context, cliente)
         }
     }
+    suspend fun getCliente(){
+
+    }
 }

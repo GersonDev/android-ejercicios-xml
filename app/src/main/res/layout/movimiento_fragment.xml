@@ -14,7 +14,6 @@
         android:text="Registrar Movimientos"
         app:layout_constraintBottom_toTopOf="@+id/regresarTresMPButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout11"
         app:layout_constraintVertical_bias="0.5" />
