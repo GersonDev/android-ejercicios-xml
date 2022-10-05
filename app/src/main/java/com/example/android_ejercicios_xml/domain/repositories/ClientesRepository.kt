@@ -21,7 +21,13 @@ class ClientesRepository {
             databaseDataSource.insertCliente(context, cliente)
         }
     }
-    suspend fun getCliente(){
+
+    suspend fun getClientePorDNI(context: Context, dni: Int): Cliente {
+        return withContext(Dispatchers.IO) {
+            databaseDataSource.getAllTheClientes(context).first {
+                it.dni == dni
+            }
+        }
 
     }
 }

@@ -20,4 +20,12 @@ class MovimientosRepository {
             databaseDataSource.insertMovimieto(context, movimiento)
         }
     }
+
+    suspend fun getMovimientoPorNumeroDeCuenta(context: Context, numeroDeCuenta: Int):List<Movimiento> {
+        return withContext(Dispatchers.IO) {
+            databaseDataSource.getAllMovimientos(context).filter {
+                it.numeroDeCuenta == numeroDeCuenta
+            }
+        }
+    }
 }
