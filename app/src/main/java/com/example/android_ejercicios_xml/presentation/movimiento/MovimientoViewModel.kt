@@ -58,7 +58,7 @@ class MovimientoViewModel(val app: Application) : AndroidViewModel(app) {
                 saldoContable = cuentaEncontrada.saldoActual + _importe.value?.toDouble()!!
             } else {
                 if (saldoContable - _importe.value?.toDouble()!!<0){
-                    "// mandar mensaje"
+                    "DEBES INGRESAR EL CAMPO ES OBLIGATORIO"
                 }else{
                     saldoContable = cuentaEncontrada.saldoActual - _importe.value?.toDouble()!!
                 }
