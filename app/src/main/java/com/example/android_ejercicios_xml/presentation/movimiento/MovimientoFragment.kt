@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.android_ejercicios_xml.R
@@ -38,10 +39,13 @@ class MovimientoFragment : Fragment() {
             findNavController().navigate(R.id.PantallaMenuGeneralFragment)
         }
         binding.registrarMovimientoButton.setOnClickListener {
-            val tipoDeOperacion = binding.tipoDeOperacionRadioGroup.checkedRadioButtonId.toString()
+
+            val radioGroupId = binding.tipoDeOperacionRadioGroup.checkedRadioButtonId
+            val radioButtonSeleccionado = binding.tipoDeOperacionRadioGroup.findViewById<RadioButton>(radioGroupId)
+
             val importe = binding.importeEditText.text.toString()
             val descripcion = binding.descripcionEditText.text.toString()
-            movimientoViewModel.enviarTipoDeOperacion(tipoDeOperacion)
+            movimientoViewModel.enviarTipoDeOperacion(radioButtonSeleccionado.text.toString())
             movimientoViewModel.enviarimporte(importe)
             movimientoViewModel.enviardescripcion(descripcion)
 

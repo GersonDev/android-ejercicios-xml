@@ -23,17 +23,22 @@ class InformeGeneralViewModel(val app: Application) : AndroidViewModel(app) {
     private val _informeGeneral = MutableLiveData("")
     val informeGeneral: LiveData<String> = _informeGeneral
 
-    fun enviarNumeroDeCuenta(numeroDeCuenta:String){
-        _numeroDeCuenta.value = numeroDeCuenta
-    }
 
-
-    fun registrarInformeGeneral() {
+    fun registrarInformeGeneral(numeroDeCuenta: Int) {
 
         viewModelScope.launch {
             val clienteEncontrado = clientesRepository.getClientePorDNI(app, preferences.getdni())
-            val cuentaEncontrada = cuentasRepository.getCuentaPorNumeroDeCuenta(app,preferences.getNumeroDeCuenta())
-            val movimientoEncontrado = movimientosRepository.getMovimientoPorNumeroDeCuenta(app,preferences.getNumeroDeCuenta())
+
+            val cuentaEncontrada = cuentasRepository.getCuentaPorNumeroDeCuenta(app, numeroDeCuenta)
+
+            val movimientoEncontrado = movimientosRepository.getMovimientoPorNumeroDeCuenta(app, numeroDeCuenta)
+
+            var movimientos = ""
+
+            movimientoEncontrado.forEach {
+                movimientos +="${it.numeroDeCuenta}   ${it.fechaOperacion} ${it.descripcion} ${it.numeroDeOperacion} ${it.tipoDeOperacion} ${it.importe} ${it.saldoContable} \n"
+            }
+
             _informeGeneral.value = "Cliente:${clienteEncontrado.nombreCliente}\n" +
                     "Direccion:${clienteEncontrado.direccion}\n" +
                     "Distrito:${clienteEncontrado.distrito}\n\n" +
@@ -42,8 +47,9 @@ class InformeGeneralViewModel(val app: Application) : AndroidViewModel(app) {
                     "Moneda: ${cuentaEncontrada.moneda}\n" +
                     "Saldo Actual: ${cuentaEncontrada.saldoActual}\n\n" +
                     "Movimientos\n\n" +
-                    ""
-
+                    "NumeroCuenta  Fecha  Descripcion  Numero  Tipo  Importe Saldo\n" +
+                    "                           Operacion                 OperacionOperacion   Contable\n" +
+                    movimientos
         }
 
     }

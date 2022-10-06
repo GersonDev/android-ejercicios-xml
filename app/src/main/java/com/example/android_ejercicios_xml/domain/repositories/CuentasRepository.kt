@@ -1,7 +1,6 @@
 package com.example.android_ejercicios_xml.domain.repositories
 
 import android.content.Context
-import com.example.android_ejercicios_xml.data.database.entities.CuentaEntity
 import com.example.android_ejercicios_xml.data.datasources.DatabaseDataSource
 import com.example.android_ejercicios_xml.domain.models.Cuenta
 import kotlinx.coroutines.Dispatchers
@@ -17,10 +16,17 @@ class CuentasRepository {
         }
     }
 
-    suspend fun getCuentaPorNumeroDeCuenta(context: Context, dni: Int):Cuenta {
+    suspend fun getCuentaPorDNI(context: Context, dni: Int):Cuenta {
         return withContext(Dispatchers.IO) {
             databaseDataSource.getAllTheCuentas(context).first {
                 it.dni == dni
+            }
+        }
+    }
+    suspend fun getCuentaPorNumeroDeCuenta(context: Context, numeroDeCuenta: Int):Cuenta {
+        return withContext(Dispatchers.IO) {
+            databaseDataSource.getAllTheCuentas(context).first {
+                it.numeroDeCuenta == numeroDeCuenta
             }
         }
     }

@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/infromeGeneralTextView"
         app:layout_constraintVertical_bias="0.5" />
 
     <LinearLayout
@@ -24,7 +24,7 @@
         android:layout_width="386dp"
         android:layout_height="71dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/regresarCuatroMPButton"
+        app:layout_constraintBottom_toTopOf="@+id/infromeGeneralTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/dniInformeEditText"
+            android:id="@+id/numeroDeCuentaEditText"
             android:layout_width="148dp"
             android:layout_height="42dp"
             android:ems="10"
@@ -54,16 +54,15 @@
 
     <TextView
         android:id="@+id/infromeGeneralTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="356dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#600909"
+        app:layout_constraintBottom_toTopOf="@+id/regresarCuatroMPButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbars = "vertical"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -48,10 +48,22 @@ class MovimientoViewModel(val app: Application) : AndroidViewModel(app) {
             val numeroDeOperacionAleatorio = (100000..200000).random()
 
             val dateTime = LocalDateTime.now()
-                .format(DateTimeFormatter.ofPattern("mm-dd-yyyy"))
+                .format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
 
-            val cuentaEncontrada = cuentasRepository.getCuentaPorNumeroDeCuenta(app, preferences.getdni())
-            val saldoContable = cuentaEncontrada.saldoActual + _importe.value?.toDouble()!!
+            val cuentaEncontrada = cuentasRepository.getCuentaPorDNI(app, preferences.getdni())
+
+            var saldoContable = 0.0
+
+            if (tipoDeOperacion.value == "Deposito") {
+                saldoContable = cuentaEncontrada.saldoActual + _importe.value?.toDouble()!!
+            } else {
+                if (saldoContable - _importe.value?.toDouble()!!<0){
+                    "// mandar mensaje"
+                }else{
+                    saldoContable = cuentaEncontrada.saldoActual - _importe.value?.toDouble()!!
+                }
+            }
+
 
             val movimiento = Movimiento(
                 numeroDeOperacion = "$numeroDeOperacionAleatorio".toInt(),

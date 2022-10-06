@@ -1,6 +1,7 @@
 package com.example.android_ejercicios_xml.presentation.reporte
 
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -34,7 +35,8 @@ class InformeGeneralFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+    //obvervatstate
+        binding.infromeGeneralTextView.movementMethod = ScrollingMovementMethod()
         informeGeneralViewModel.informeGeneral.observe(viewLifecycleOwner, Observer {
             binding.infromeGeneralTextView.text = it
         })
@@ -43,9 +45,9 @@ class InformeGeneralFragment : Fragment() {
             findNavController().navigate(R.id.PantallaMenuGeneralFragment)
         }
         binding.BuscarButton.setOnClickListener {
-            val dni = binding.dniInformeEditText.text.toString()
+            val numeroDeCuenta = binding.numeroDeCuentaEditText.text.toString().toInt()
 
-            informeGeneralViewModel.registrarInformeGeneral()
+            informeGeneralViewModel.registrarInformeGeneral(numeroDeCuenta = numeroDeCuenta)
         }
     }
 
