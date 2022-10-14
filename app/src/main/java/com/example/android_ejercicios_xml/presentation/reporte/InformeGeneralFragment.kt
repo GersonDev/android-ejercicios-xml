@@ -15,6 +15,7 @@ import com.example.android_ejercicios_xml.databinding.InformeGeneralFragmentBind
 
 class InformeGeneralFragment : Fragment() {
 
+    //llamar al viewmodel uso den base de datos
     val informeGeneralViewModel by viewModels<InformeGeneralViewModel>()
 
     private var _binding: InformeGeneralFragmentBinding? = null
