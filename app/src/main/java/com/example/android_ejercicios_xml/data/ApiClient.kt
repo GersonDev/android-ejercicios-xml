@@ -12,7 +12,7 @@ object ApiClient {
         interceptor.level = HttpLoggingInterceptor.Level.BODY
         val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
         return Retrofit.Builder()
-            .baseUrl("http://192.168.0.112:3006/")
+            .baseUrl("http://192.168.0.100:3006/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

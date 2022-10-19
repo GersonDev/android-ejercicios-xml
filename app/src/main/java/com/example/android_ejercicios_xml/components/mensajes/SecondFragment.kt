@@ -10,8 +10,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.work.*
 import com.example.android_ejercicios_xml.R
 import com.example.android_ejercicios_xml.components.MensajeAdapter
+import com.example.android_ejercicios_xml.components.services.EnviarMensajeWorker
 import com.example.android_ejercicios_xml.databinding.FragmentSecondBinding
 import com.example.android_ejercicios_xml.domain.models.Mensaje
 
@@ -70,6 +72,27 @@ class SecondFragment : Fragment() {
         binding.swipeRefresh.setOnRefreshListener {
             secondFragmentViewModel.getMensajes()
             binding.swipeRefresh.isRefreshing = false
+        }
+
+        binding.btnWorkManager.setOnClickListener {
+            // obtenemos el mensaje desde la vista
+            val mensaje = binding.mensajeEditTextMultiline.text.toString()
+
+            // valor a enviar
+            val data = Data.Builder()
+                .putString("mensaje_llave", mensaje)
+                .build()
+
+            // creamos el request
+            val uploadWorkRequest: WorkRequest =
+                OneTimeWorkRequestBuilder<EnviarMensajeWorker>()
+                    .setInputData(data)
+                    .build()
+
+            //enviamos el request al sistema
+            val workManager = WorkManager.getInstance(requireContext())
+            workManager.enqueue(uploadWorkRequest)
+
         }
     }
 
