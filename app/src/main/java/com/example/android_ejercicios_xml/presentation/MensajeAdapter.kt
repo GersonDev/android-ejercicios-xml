@@ -1,4 +1,4 @@
-package com.example.android_ejercicios_xml.components
+package com.example.android_ejercicios_xml.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

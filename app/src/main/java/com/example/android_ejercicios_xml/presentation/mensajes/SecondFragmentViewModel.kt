@@ -1,4 +1,4 @@
-package com.example.android_ejercicios_xml.components.mensajes
+package com.example.android_ejercicios_xml.presentation.mensajes
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -9,9 +9,10 @@ import com.example.android_ejercicios_xml.domain.models.Mensaje
 import com.example.android_ejercicios_xml.domain.repositories.MensajesRepository
 import kotlinx.coroutines.launch
 
-class SecondFragmentViewModel(val app: Application) : AndroidViewModel(app) {
-
-    private val mensajesRepository: MensajesRepository = MensajesRepository()
+class SecondFragmentViewModel(
+    val app: Application,
+    val mensajesRepository: MensajesRepository
+    ) : AndroidViewModel(app) {
 
     private val _mensajesMutableLiveData = MutableLiveData<List<Mensaje>>(emptyList())
     val mensajesLiveData: LiveData<List<Mensaje>> = _mensajesMutableLiveData

@@ -54,6 +54,9 @@ dependencies {
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
+    // Koin
+    implementation "io.insert-koin:koin-android:3.2.3"
+
 
     implementation "androidx.compose.runtime:runtime-livedata:1.2.1"
 
