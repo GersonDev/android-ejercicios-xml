@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#6C1212"
         android:src="@android:drawable/ic_menu_send"
-        app:layout_constraintBottom_toTopOf="@+id/btnWorkManager"
+        app:layout_constraintBottom_toTopOf="@+id/workManaherImagButon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/mensajeEditTextMultiline"
@@ -66,11 +66,14 @@
         app:layout_constraintTop_toBottomOf="@+id/swipeRefresh"
         app:layout_constraintVertical_bias="0.444" />
 
-    <Button
-        android:id="@+id/btnWorkManager"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+    <ImageButton
+        android:id="@+id/workManaherImagButon"
+        android:layout_width="53dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#131D43"
+        android:src="@android:drawable/ic_menu_send"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

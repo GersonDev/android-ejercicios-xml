@@ -74,7 +74,7 @@ class SecondFragment : Fragment() {
             binding.swipeRefresh.isRefreshing = false
         }
 
-        binding.btnWorkManager.setOnClickListener {
+        binding.workManaherImagButon.setOnClickListener {
             // obtenemos el mensaje desde la vista
             val mensaje = binding.mensajeEditTextMultiline.text.toString()
 
