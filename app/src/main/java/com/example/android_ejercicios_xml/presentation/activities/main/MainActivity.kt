@@ -1,4 +1,4 @@
-package com.example.android_ejercicios_xml.presentation
+package com.example.android_ejercicios_xml.presentation.activities.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

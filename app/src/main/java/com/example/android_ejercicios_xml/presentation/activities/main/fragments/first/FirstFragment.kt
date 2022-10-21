@@ -1,4 +1,4 @@
-package com.example.android_ejercicios_xml.presentation
+package com.example.android_ejercicios_xml.presentation.activities.main.fragments.first
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

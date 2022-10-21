@@ -1,4 +1,4 @@
-package com.example.android_ejercicios_xml.presentation.mensajes
+package com.example.android_ejercicios_xml.presentation.activities.main.fragments.second
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

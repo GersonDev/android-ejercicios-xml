@@ -1,4 +1,4 @@
-package com.example.android_ejercicios_xml.presentation.mensajes
+package com.example.android_ejercicios_xml.presentation.activities.main.fragments.second
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,8 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.work.*
-import com.example.android_ejercicios_xml.presentation.MensajeAdapter
-import com.example.android_ejercicios_xml.presentation.services.EnviarMensajeWorker
+import com.example.android_ejercicios_xml.services.EnviarMensajeWorker
 import com.example.android_ejercicios_xml.databinding.FragmentSecondBinding
 import com.example.android_ejercicios_xml.domain.models.Mensaje
 import org.koin.android.ext.android.inject

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "729205052700",
+    "project_id": "primertrabajo-2dfdb",
+    "storage_bucket": "primertrabajo-2dfdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729205052700:android:0be5d55f1fb4f1dbb0d6d9",
+        "android_client_info": {
+          "package_name": "com.example.android_ejercicios_xml"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729205052700-kgmne1nqtekq4mo1ch8a6t5apl8ujkfq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTYd5k5zkJCpuQbqW1KR0eeFmMFyyIdqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729205052700-kgmne1nqtekq4mo1ch8a6t5apl8ujkfq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
